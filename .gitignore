@@ -1,0 +1,48 @@
+# --- KiCad ---
+*.kicad_prl
+*-backups/
+_autosave-*
+*.bak
+*.kicad_sch-bak
+*.kicad_pcb-bak
+*.lck
+~*.lck
+fp-info-cache
+*.net
+# Fab outputs: generate from source, attach to GitHub Releases instead
+pcb/production/
+pcb/gerbers/
+*.zip
+
+# --- FreeCAD ---
+*.FCBak
+*.FCStd1
+*.FCStd.bak
+
+# --- 3D print slicer output (keep STL/STEP exports, ignore G-code) ---
+*.gcode
+*.bgcode
+
+# --- Firmware (PlatformIO / ESP-IDF / Arduino) ---
+firmware/.pio/
+firmware/build/
+firmware/managed_components/
+firmware/sdkconfig.old
+firmware/.vscode/.browse*
+firmware/.vscode/ipch/
+*.elf
+*.bin
+*.map
+compile_commands.json
+.cache/
+# Secrets: commit a secrets.example.h, never the real one
+firmware/**/secrets.h
+firmware/**/credentials.h
+.env
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
